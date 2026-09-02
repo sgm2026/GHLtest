@@ -13,3 +13,10 @@ Submissions go straight to that GHL location; no endpoint configuration needed.
 
 `builder/styles.css` and `builder/referral-block.html` are copy-paste versions
 for a page builder (scoped under `.nspyr-referral`).
+
+## Client signup page
+
+`signup.html` is the client-facing version: same branding, with the Dispute
+Process (pulse.disputeprocess.com) signup form. Builder copies live at
+`builder/signup-styles.css` and `builder/signup-block.html` (scoped under
+`.nspyr-signup`).
