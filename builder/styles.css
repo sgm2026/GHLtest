@@ -1,0 +1,35 @@
+/* NSPYR x Elevate Advisory Consulting - Credit Referral Form
+   Paste into your builder's Custom CSS / stylesheet area. */
+
+  .nspyr-referral{--bg:#0b0b0b;--panel:#141414;--line:#2a2a2a;--text:#f5f5f5;--muted:#a3a3a3;--accent:#fff;--warn:#f5c542}
+  .nspyr-referral *{box-sizing:border-box}
+  .nspyr-referral{background:radial-gradient(ellipse at top,#1f1f1f,var(--bg) 60%);color:var(--text);font-family:Helvetica,Arial,sans-serif;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:32px 16px}
+  .nspyr-referral .wrap{display:grid;grid-template-columns:340px 1fr;gap:48px;max-width:1100px;width:100%}
+  .nspyr-referral .brand{text-align:center;position:sticky;top:32px}
+  .nspyr-referral .brand .logo{width:min(260px,70vw);height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
+  .nspyr-referral .brand h1{font-size:26px;font-weight:900;font-style:italic;letter-spacing:-.5px;margin:24px 0 8px}
+  .nspyr-referral .brand p{color:var(--muted);line-height:1.5;margin:0 auto;max-width:320px;font-size:14px}
+  .nspyr-referral .tag{display:inline-block;margin-top:16px;padding:6px 14px;border:1px solid var(--warn);color:var(--warn);border-radius:999px;font-size:11px;letter-spacing:3px;text-transform:uppercase}
+  .nspyr-referral .steps{text-align:left;margin:24px auto 0;max-width:320px;padding:0;list-style:none;font-size:13px;color:var(--muted)}
+  .nspyr-referral .steps li{padding:8px 0;border-top:1px solid var(--line)}
+  .nspyr-referral .steps b{color:var(--text)}
+  .nspyr-referral .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:32px}
+  .nspyr-referral .card h2{margin:0 0 4px;font-size:22px}
+  .nspyr-referral .card .sub{color:var(--muted);margin:0 0 8px;font-size:14px}
+  .nspyr-referral fieldset{border:0;padding:0;margin:26px 0 0}
+  .nspyr-referral legend{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--warn);padding:0;margin-bottom:4px}
+  .nspyr-referral label{display:block;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+  .nspyr-referral input, .nspyr-referral select, .nspyr-referral textarea{width:100%;padding:12px 14px;background:#0f0f0f;border:1px solid var(--line);border-radius:8px;color:var(--text);font-size:15px;font-family:inherit}
+  .nspyr-referral textarea{min-height:90px;resize:vertical}
+  .nspyr-referral input:focus, .nspyr-referral select:focus, .nspyr-referral textarea:focus{outline:none;border-color:var(--accent)}
+  .nspyr-referral .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .nspyr-referral .row3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+  .nspyr-referral .check{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:16px;text-transform:none;letter-spacing:0}
+  .nspyr-referral .check input{width:auto;margin-top:2px}
+  .nspyr-referral button{width:100%;margin-top:22px;padding:14px;background:var(--accent);color:#000;border:0;border-radius:8px;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
+  .nspyr-referral button:hover{background:#e6e6e6}
+  .nspyr-referral .fine{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
+  .nspyr-referral .success{display:none;text-align:center;padding:24px 0}
+  .nspyr-referral .success h2{font-style:italic;font-weight:900}
+  .nspyr-referral .success a{color:var(--text)}
+  @media(max-width:860px){.nspyr-referral .wrap{grid-template-columns:1fr}.nspyr-referral .brand{position:static}.nspyr-referral .row,.nspyr-referral .row3{grid-template-columns:1fr}}
