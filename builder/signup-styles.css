@@ -4,7 +4,7 @@
   .nspyr-signup{--bg:#0b0b0b;--panel:#141414;--line:#2a2a2a;--text:#f5f5f5;--muted:#a3a3a3;--accent:#fff;--warn:#f5c542}
   .nspyr-signup *{box-sizing:border-box}
   .nspyr-signup{background:radial-gradient(ellipse at top,#1f1f1f,var(--bg) 60%);color:var(--text);font-family:Helvetica,Arial,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px}
-  .nspyr-signup .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1100px;width:100%;align-items:center}
+  .nspyr-signup .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;max-width:1100px;width:100%;align-items:center}
   .nspyr-signup .brand{text-align:center}
   .nspyr-signup .brand .logo{width:min(300px,75vw);height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
   .nspyr-signup .brand h1{font-size:clamp(26px,3.5vw,38px);font-weight:900;font-style:italic;letter-spacing:-.5px;margin:26px 0 10px}
@@ -16,6 +16,18 @@
   .nspyr-signup .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:32px}
   .nspyr-signup .card h2{margin:0 0 4px;font-size:22px}
   .nspyr-signup .card .sub{color:var(--muted);margin:0 0 20px;font-size:14px}
-  .nspyr-signup .dp-form iframe{display:block;border:0;border-radius:8px}
+  /* Dispute Process form: transparent background, white labels */
+  .nspyr-signup .dp-form{width:100%;max-width:none;margin:0;padding:0;border:0;background:transparent;color:var(--text);font-family:inherit}
+  .nspyr-signup .dp-form .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}
+  .nspyr-signup .dp-form .field{margin:0}
+  .nspyr-signup .dp-form .field.full{grid-column:1/-1}
+  .nspyr-signup .dp-form .field:has(input[required]) label::after{content:" *";color:var(--warn)}
+  .nspyr-signup .dp-form label{display:block;margin:0 0 6px;color:#fff;font-size:12px;line-height:16px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+  .nspyr-signup .dp-form input:not([type=hidden]){height:46px;width:100%;display:block;padding:10px 14px;background:transparent;border:1px solid #4a4a4a;border-radius:8px;color:#fff;font-size:15px;font-weight:400;font-family:inherit;color-scheme:dark}
+  .nspyr-signup .dp-form input::placeholder{color:#6b6b6b}
+  .nspyr-signup .dp-form input:focus{outline:none;border-color:#fff}
+  .nspyr-signup .dp-form .actions{margin:22px 0 0}
+  .nspyr-signup .dp-form button{width:100%;display:block;padding:14px;background:var(--accent);color:#000;border:0;border-radius:8px;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;line-height:1.2;font-family:inherit}
+  .nspyr-signup .dp-form button:hover{background:#e6e6e6}
   .nspyr-signup .fine{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
-  @media(max-width:820px){.nspyr-signup .wrap{grid-template-columns:1fr}}
+  @media(max-width:820px){.nspyr-signup .wrap{grid-template-columns:1fr}.nspyr-signup .dp-form .grid{grid-template-columns:1fr}}
