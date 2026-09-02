@@ -11,7 +11,8 @@
   .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;max-width:1100px;width:100%;align-items:center}
   .brand{text-align:center}
   .brand img{width:min(300px,75vw);height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
-  .brand h1{font-size:clamp(26px,3.5vw,38px);font-weight:900;font-style:italic;letter-spacing:-.5px;margin:26px 0 10px}
+  .brand h1{font-size:clamp(26px,3.5vw,38px);font-weight:900;font-style:italic;letter-spacing:-.5px;margin:26px 0 10px;background:linear-gradient(110deg,#8a6a1c 0%,#d4af37 25%,#fff3b0 48%,#d4af37 60%,#8a6a1c 80%,#d4af37 100%);background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:goldShine 3.5s linear infinite;filter:drop-shadow(0 0 10px rgba(212,175,55,.35))}
+  @keyframes goldShine{to{background-position:250% center}}
   .brand p{color:var(--muted);line-height:1.55;margin:0 auto;max-width:400px;font-size:15px}
   .tag{display:inline-block;margin-top:18px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
   .perks{text-align:left;margin:24px auto 0;max-width:400px;padding:0;list-style:none;font-size:14px;color:var(--muted)}
