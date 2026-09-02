@@ -17,6 +17,6 @@ for a page builder (scoped under `.nspyr-referral`).
 ## Client signup page
 
 `signup.html` is the client-facing version: same branding, with the Dispute
-Process (pulse.disputeprocess.com) signup form. Builder copies live at
+Process signup form embedded as an iframe (redirects to MyFreeScoreNow enrollment on completion). Builder copies live at
 `builder/signup-styles.css` and `builder/signup-block.html` (scoped under
 `.nspyr-signup`).
