@@ -12,6 +12,6 @@
   <!-- wordmark -->
   <text x="200" y="248" text-anchor="middle" fill="#fff" font-family="Arial Black, Impact, Helvetica, Arial, sans-serif" font-weight="900" font-style="italic" font-size="92" letter-spacing="-2">NSPYR</text>
   <!-- tagline -->
-  <text x="200" y="286" text-anchor="middle" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="14.5" letter-spacing="3.5">BY <tspan font-weight="700">ELEVATE ADVISORY CONSULTING</tspan></text>
+  <text x="200" y="286" text-anchor="middle" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="11.5" letter-spacing="2">BY <tspan font-weight="700">ELEVATE ADVISORY CONSULTING</tspan></text>
   <line x1="182" y1="312" x2="218" y2="312" stroke="#fff" stroke-width="3"/>
 </svg>
