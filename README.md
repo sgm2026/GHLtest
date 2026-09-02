@@ -7,6 +7,9 @@ notifies the rep when the customer is ready to re-apply.
 
 Open `index.html` in a browser. The logo lives at `assets/nspyr-elevate-logo.svg`.
 
-To deliver submissions, set `ENDPOINT` in `index.html` to Elevate's intake URL
-(e.g. a GoHighLevel form or inbound webhook). The form POSTs JSON with rep,
-customer, and decline-detail fields.
+
+The form itself is the GoHighLevel form `tcMZuG7mrLkscqJ2Cj2c`, embedded inline.
+Submissions go straight to that GHL location; no endpoint configuration needed.
+
+`builder/styles.css` and `builder/referral-block.html` are copy-paste versions
+for a page builder (scoped under `.nspyr-referral`).
