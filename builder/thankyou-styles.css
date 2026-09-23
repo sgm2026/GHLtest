@@ -11,12 +11,7 @@
   .nspyr-thanks h1{font-size:clamp(28px,5vw,44px);font-weight:900;font-style:italic;letter-spacing:-.5px;margin:18px 0 12px;background:linear-gradient(110deg,#8a6a1c 0%,#d4af37 25%,#fff3b0 48%,#d4af37 60%,#8a6a1c 80%,#d4af37 100%);background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:nspyrThanksGold 3.5s linear infinite;filter:drop-shadow(0 0 10px rgba(212,175,55,.35))}
   @keyframes nspyrThanksGold{to{background-position:250% center}}
   .nspyr-thanks .lead{color:var(--muted);line-height:1.6;margin:0 auto;max-width:480px;font-size:16px}
-  .nspyr-thanks .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;margin:28px 0 0;text-align:left}
-  .nspyr-thanks .card h2{margin:0 0 6px;font-size:18px;text-align:center}
-  .nspyr-thanks .card .sub{color:var(--muted);margin:0 0 18px;font-size:14px;text-align:center;line-height:1.5}
-  .nspyr-thanks .steps{list-style:none;margin:0 0 22px;padding:0;font-size:14px;color:var(--muted)}
-  .nspyr-thanks .steps li{padding:10px 0;border-top:1px solid var(--line)}
-  .nspyr-thanks .steps b{color:var(--text)}
+  .nspyr-thanks .cta{margin:28px auto 0;max-width:420px}
   .nspyr-thanks .btn{display:block;width:100%;padding:14px;background:var(--accent);color:#000;border-radius:8px;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-align:center;text-decoration:none;line-height:1.2}
   .nspyr-thanks .btn:hover{background:#e6e6e6}
   .nspyr-thanks .count{margin:12px 0 0;text-align:center;font-size:13px;color:var(--muted)}
