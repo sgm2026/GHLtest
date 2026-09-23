@@ -22,20 +22,23 @@
   .card h2{margin:0 0 4px;font-size:22px}
   .card .sub{color:var(--muted);margin:0 0 20px;font-size:14px}
   /* Dispute Process form: transparent background, white labels */
-  .dp-form{width:100%;max-width:none;margin:0;padding:0;border:0;background:transparent;color:var(--text);font-family:inherit}
-  .dp-form .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}
-  .dp-form .field{margin:0}
-  .dp-form .field.full{grid-column:1/-1}
-  .dp-form .field:has(input[required]) label::after{content:" *";color:var(--warn)}
-  .dp-form label{display:block;margin:0 0 6px;color:#fff;font-size:12px;line-height:16px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
-  .dp-form input:not([type=hidden]){height:46px;width:100%;display:block;padding:10px 14px;background:transparent;border:1px solid #4a4a4a;border-radius:8px;color:#fff;font-size:15px;font-weight:400;font-family:inherit;color-scheme:dark}
-  .dp-form input::placeholder{color:#6b6b6b}
-  .dp-form input:focus{outline:none;border-color:#fff}
-  .dp-form .actions{margin:22px 0 0}
-  .dp-form button{width:100%;display:block;padding:14px;background:var(--accent);color:#000;border:0;border-radius:8px;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;line-height:1.2;font-family:inherit}
-  .dp-form button:hover{background:#e6e6e6}
+  .credit-repair-form{width:100%;margin:0;padding:0;border:0;background:transparent;color:var(--text);font-family:inherit}
+  .credit-repair-form .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px}
+  .credit-repair-form .form-group{display:flex;flex-direction:column;margin:0}
+  .credit-repair-form .form-group-full{grid-column:1/-1}
+  .credit-repair-form .form-group:has(input[required]) label::after{content:" *";color:var(--warn)}
+  .credit-repair-form label{display:block;min-height:32px;margin:0 0 6px;color:#fff;font-size:12px;line-height:16px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+  .credit-repair-form input:not([type=hidden]){height:46px;width:100%;box-sizing:border-box;display:block;padding:10px 14px;background:transparent;border:1px solid #4a4a4a;border-radius:8px;color:#fff;font-size:15px;font-weight:400;font-family:inherit;color-scheme:dark}
+  .credit-repair-form input::placeholder{color:#6b6b6b}
+  .credit-repair-form input:focus{outline:none;border-color:#fff}
+  .credit-repair-form small{margin-top:5px;color:var(--muted);font-size:11px}
+  .credit-repair-form .submit-button{width:100%;display:block;margin-top:22px;padding:14px;background:var(--accent);color:#000;border:0;border-radius:8px;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;line-height:1.2;font-family:inherit}
+  .credit-repair-form .submit-button:hover{background:#e6e6e6}
+  .credit-repair-form .submit-button:disabled{opacity:.6;cursor:not-allowed}
+  .credit-repair-form .form-message{margin-top:14px;text-align:center;font-size:14px;color:var(--warn)}
+  .credit-repair-form .form-message:empty{display:none}
   .fine{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
-  @media(max-width:820px){.wrap{grid-template-columns:1fr}.dp-form .grid{grid-template-columns:1fr}}
+  @media(max-width:820px){.wrap{grid-template-columns:1fr}.credit-repair-form .form-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -56,73 +59,37 @@
     <h2>Create your account</h2>
     <p class="sub">Fill in your details below. Fields marked with a star are required. / Complete sus datos a continuación.</p>
 
-<form action="https://pulse.disputeprocess.com/CustumFieldController"
-      onsubmit="return submitForm(this);"
-      enctype="multipart/form-data"
-      method="POST"
-      class="dp-form">
+<form action="https://pulse.disputeprocess.com/CustumFieldController" onsubmit="return submitForm(this);" enctype="multipart/form-data" method="POST" class="credit-repair-form">
+  <!-- DISPUTE PROCESS SETTINGS -->
+  <input type="hidden" name="method" value="addWebFormData">
+  <input type="hidden" name="tab_info_id" value="bUt4d21QYTZCWGRsVVpONE9CUlNpZz09">
+  <input type="hidden" name="redirect_url" value="https://app.myfreescorenow.com/enroll/B02C0134">
+  <input type="hidden" name="company_id" value="N1FiRlBIdmhXMUNZRDJyUEgyRzE4UT09">
+  <input type="hidden" name="cust_type" value="2">
+  <input type="hidden" name="add_affiliate_flag" value="0">
+  <input type="hidden" name="assignedto_id" value="39341">
+  <input type="hidden" name="sales_representative_id" value="39341">
+  <input type="hidden" name="workflow_statusid" value="30">
+  <input type="hidden" name="folder_statusid" value="1">
+  <input type="hidden" name="customer_statusid" value="-1">
+  <input type="hidden" name="portalAccess" value="1">
+  <input type="hidden" name="customerAgreementIDs" value="47330">
 
-    <input type="hidden" name="method" value="addWebFormData">
-    <input type="hidden" name="tab_info_id" value="cXo0Q0dhNSs2cTdDUVg2OG1zdlRFUT09">
-    <input type="hidden" name="redirect_url" value="https://app.myfreescorenow.com/enroll/B02C0134">
-    <input type="hidden" name="company_id" value="M3Z6NGlhWDBxZmRjNk5jQVZPdEZrdz09">
-    <input type="hidden" name="cust_type" value="2">
-    <input type="hidden" name="add_affiliate_flag" value="0">
-    <input type="hidden" name="assignedto_id" value="26055">
-    <input type="hidden" name="sales_representative_id" value="26055">
-    <input type="hidden" name="workflow_statusid" value="30">
-    <input type="hidden" name="folder_statusid" value="1">
-    <input type="hidden" name="customer_statusid" value="1">
-    <input type="hidden" name="portalAccess" value="1">
-    <input type="hidden" name="customerAgreementIDs" value="30537">
+  <div class="form-grid">
+    <div class="form-group"><label>First Name / Primer Nombre</label><input type="text" name="firstName" required></div>
+    <div class="form-group"><label>Last Name / Apellido</label><input type="text" name="lastName" required></div>
+    <div class="form-group"><label>Email Address / Correo Electrónico</label><input type="email" name="email1" required></div>
+    <div class="form-group"><label>Cell Phone / Teléfono Celular</label><input type="tel" name="mobilePhone1" placeholder="(___) ___-____" required></div>
+    <div class="form-group"><label>Social Security # / ITIN</label><input type="text" name="socialSecurityNumber1" inputmode="numeric" autocomplete="off"><small>You may enter the last 4 digits if applicable.</small></div>
+    <div class="form-group"><label>Date of Birth / Fecha de Nacimiento</label><input type="date" name="dateOfBirth" required></div>
+    <div class="form-group form-group-full"><label>Current Address / Dirección Actual</label><input type="text" name="currentAddress"></div>
+    <div class="form-group"><label>City / Ciudad</label><input type="text" name="city"></div>
+    <div class="form-group"><label>State / Estado</label><input type="text" name="state"></div>
+    <div class="form-group"><label>ZIP Code / Código Postal</label><input type="text" name="zipCode1"></div>
+  </div>
 
-    <div class="grid">
-        <div class="field">
-            <label>First Name / Primer Nombre</label>
-            <div><input type="text" class="form-control" name="firstName" required></div>
-        </div>
-        <div class="field">
-            <label>Last Name / Apellido</label>
-            <div><input type="text" class="form-control" name="lastName" required></div>
-        </div>
-        <div class="field">
-            <label>Email Address / Correo Electrónico</label>
-            <div><input type="email" name="email" required></div>
-        </div>
-        <div class="field">
-            <label>Cell Phone / Teléfono Celular</label>
-            <div><input type="text" name="mobilePhone1" placeholder="(___) ___-____"></div>
-        </div>
-        <div class="field">
-            <label>Social Security # / ITIN</label>
-            <div><input type="text" class="form-control" name="socialSecurityNumber1"></div>
-        </div>
-        <div class="field">
-            <label>Date Of Birth / Fecha de Nacimiento</label>
-            <div><input type="date" name="dateOfBirth"></div>
-        </div>
-        <div class="field full">
-            <label>Current Address / Dirección Actual</label>
-            <div><input type="text" class="form-control" name="currentAddress"></div>
-        </div>
-        <div class="field">
-            <label>City / Ciudad</label>
-            <div><input type="text" class="form-control" name="city"></div>
-        </div>
-        <div class="field">
-            <label>State / Estado</label>
-            <div><input type="text" class="form-control" name="state"></div>
-        </div>
-        <div class="field">
-            <label>Zip code / Código Postal</label>
-            <div><input type="text" class="form-control" name="zipCode1"></div>
-        </div>
-    </div>
-
-    <div class="actions">
-        <button type="submit" class="btn btn-info">GET STARTED!</button>
-    </div>
-
+  <button type="submit" class="submit-button">YES! Sign Me Up!</button>
+  <div id="form-message" class="form-message"></div>
 </form>
 
     <p class="fine">By signing up you agree to be contacted by Elevate Advisory Consulting.</p>
@@ -131,237 +98,59 @@
 
 
 <script>
-var formData1 = new FormData();
+var REDIRECT_URL = "https://app.myfreescorenow.com/enroll/B02C0134";
 
-const submitForm = function submitForm(form) {
+function submitForm(form) {
+  var formData = new FormData();
+  for (var i = 0; i < form.elements.length; i++) {
+    var element = form.elements[i];
+    if (!element.name) continue;
+    var name = element.name;
 
-    var elements = form;
-    var formData = new FormData();
-
-    var firstName = "",
-        lastName = "",
-        currentAddress = "",
-        city = "",
-        state = "",
-        zipCode = "",
-        mobilePhone = "",
-        email = "",
-        userPassword = "";
-
-    for (var i = 0; i < elements.length; i++) {
-
-        var currentElement = elements[i].name;
-
-        if (currentElement.includes("firstName"))
-            firstName = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("lastName"))
-            lastName = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("currentAddress"))
-            currentAddress = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("city"))
-            city = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("state"))
-            state = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("zipCode"))
-            zipCode = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("mobilePhone"))
-            mobilePhone = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("monitoringUsername"))
-            email = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("password"))
-            userPassword = elements[i].value.length > 0 && elements[i].value != undefined
-                ? elements[i].value
-                : "";
-
-        if (currentElement.includes("socialSecurityNumber")) {
-
-            if (elements[i].value.length > 0) {
-
-                var ssnValidResult = SSNValidation(elements[i].value);
-
-                if (!ssnValidResult)
-                    return false;
-            }
-        }
-
-        if (currentElement.includes("selectBoxes")) {
-
-            var obj = {};
-
-            obj[elements[i].value] = elements[i].checked ? true : false;
-
-            try {
-                formData.append(elements[i].name, JSON.stringify(obj));
-            } catch (error) {
-                formData.append(elements[i].name, elements[i].value);
-            }
-
-        } else if (currentElement.includes("uploadDocument")) {
-
-            formData.append(
-                currentElement,
-                elements[i].value + "~~~~" + formData1.get(currentElement)
-            );
-
-        } else if (currentElement.includes("radio")) {
-
-            if (elements[i].checked) {
-                formData.append(elements[i].name, elements[i].value);
-            }
-
-        } else if (currentElement.includes("checkbox")) {
-
-            formData.append(
-                elements[i].name,
-                elements[i].checked
-            );
-
-        } else {
-
-            formData.append(
-                elements[i].name,
-                elements[i].value
-            );
-        }
+    if (name.indexOf("socialSecurityNumber") !== -1 && element.value.length > 0) {
+      if (!SSNValidation(element.value)) return false;
     }
 
-    var REDIRECT_URL = "https://app.myfreescorenow.com/enroll/B02C0134";
-    var submitBtn = form.querySelector('button[type="submit"]');
-    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Submitting..."; }
-
-    var xmlHttp = new XMLHttpRequest();
-
-    xmlHttp.onreadystatechange = function() {
-
-        if (xmlHttp.readyState == 4) {
-
-            if (xmlHttp.responseText && xmlHttp.responseText.includes("Account is in-activated")) {
-
-                alert(
-                    "Account Inactive: We apologize, but the service associated with this link is currently inactive. Please contact the business or individual who provided you with this link for further assistance. Thank you for your understanding"
-                );
-                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "GET STARTED!"; }
-                return;
-            }
-
-            // Always send the client to the enrollment page once the submission has completed.
-            window.location.replace(REDIRECT_URL);
-        }
-    };
-
-    xmlHttp.open(
-        "post",
-        "https://pulse.disputeprocess.com/CustumFieldController?method=addWebFormData"
-    );
-
-    xmlHttp.send(formData);
-
-    return false;
-};
-
-
-function SSNValidation(ssn) {
-
-    var matchArr = ssn.match(/^[0-9]+$/);
-
-    if (matchArr == null) {
-
-        alert("Invalid SSN. Digits only.");
-        return false;
-
-    } else if (matchArr[0].length > 9) {
-
-        alert("SSN number should be 9 digits only.");
-        return false;
-
-    } else if (matchArr[0].length < 4) {
-
-        alert("Please enter last 4 digits of SSN.");
-        return false;
-
+    if (element.type === "checkbox") {
+      formData.append(name, element.checked);
+    } else if (element.type === "radio") {
+      if (element.checked) formData.append(name, element.value);
     } else {
-
-        return true;
+      formData.append(name, element.value);
     }
+  }
+
+  var button = form.querySelector(".submit-button");
+  var message = form.querySelector("#form-message");
+  button.disabled = true;
+  button.textContent = "Submitting...";
+  message.textContent = "";
+
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState !== 4) return;
+
+    if (xmlHttp.responseText && xmlHttp.responseText.indexOf("Account is in-activated") !== -1) {
+      button.disabled = false;
+      button.textContent = "YES! Sign Me Up!";
+      message.textContent = "This registration service is currently inactive. Please contact us for assistance.";
+      return;
+    }
+
+    window.location.replace(REDIRECT_URL);
+  };
+  xmlHttp.open("POST", "https://pulse.disputeprocess.com/CustumFieldController?method=addWebFormData", true);
+  xmlHttp.send(formData);
+  return false;
 }
 
-
-var convertToBinaryData = function(thisEle) {
-
-    if ((thisEle.files[0].size / (1024 * 1024)).toFixed(2) > 10) {
-
-        thisEle.style.border = "1px solid red";
-        thisEle.value = '';
-
-        setTimeout(function() {
-            thisEle.style.border = "1px none rgb(218, 224, 235)";
-        }, 5000);
-
-        alert("File upload size should be less than 10MB");
-
-        return false;
-
-    } else if (
-        thisEle.files[0].name.includes('.heic') ||
-        ["png", "jpg", "jpeg", "heic", "heif", "pdf", "html", "htm"]
-            .includes(thisEle.files[0].type.split("/")[1])
-    ) {
-
-        const f = thisEle.files[0];
-        const reader = new FileReader();
-
-        reader.onload = function(evt) {
-
-            const contents = evt.target.result;
-
-            formData1.append(
-                thisEle.name,
-                contents
-            );
-        };
-
-        reader.readAsDataURL(f);
-
-    } else {
-
-        thisEle.value = '';
-        thisEle.style.border = "1px solid red";
-
-        setTimeout(function() {
-            thisEle.style.border = "1px none rgb(218, 224, 235)";
-        }, 5000);
-
-        alert(
-            "Please upload .png, .jpg, .jpeg, .heic, .pdf, .html, .htm format file types only"
-        );
-
-        return false;
-    }
-};
+function SSNValidation(ssn) {
+  var cleanSSN = ssn.replace(/\D/g, "");
+  if (!/^[0-9]+$/.test(cleanSSN)) { alert("Invalid SSN/ITIN. Please enter digits only."); return false; }
+  if (cleanSSN.length > 9) { alert("SSN/ITIN cannot contain more than 9 digits."); return false; }
+  if (cleanSSN.length < 4) { alert("Please enter at least the last 4 digits."); return false; }
+  return true;
+}
 </script>
 </body>
 </html>

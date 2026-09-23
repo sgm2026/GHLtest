@@ -18,17 +18,20 @@
   .nspyr-signup .card h2{margin:0 0 4px;font-size:22px}
   .nspyr-signup .card .sub{color:var(--muted);margin:0 0 20px;font-size:14px}
   /* Dispute Process form: transparent background, white labels */
-  .nspyr-signup .dp-form{width:100%;max-width:none;margin:0;padding:0;border:0;background:transparent;color:var(--text);font-family:inherit}
-  .nspyr-signup .dp-form .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}
-  .nspyr-signup .dp-form .field{margin:0}
-  .nspyr-signup .dp-form .field.full{grid-column:1/-1}
-  .nspyr-signup .dp-form .field:has(input[required]) label::after{content:" *";color:var(--warn)}
-  .nspyr-signup .dp-form label{display:block;margin:0 0 6px;color:#fff;font-size:12px;line-height:16px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
-  .nspyr-signup .dp-form input:not([type=hidden]){height:46px;width:100%;display:block;padding:10px 14px;background:transparent;border:1px solid #4a4a4a;border-radius:8px;color:#fff;font-size:15px;font-weight:400;font-family:inherit;color-scheme:dark}
-  .nspyr-signup .dp-form input::placeholder{color:#6b6b6b}
-  .nspyr-signup .dp-form input:focus{outline:none;border-color:#fff}
-  .nspyr-signup .dp-form .actions{margin:22px 0 0}
-  .nspyr-signup .dp-form button{width:100%;display:block;padding:14px;background:var(--accent);color:#000;border:0;border-radius:8px;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;line-height:1.2;font-family:inherit}
-  .nspyr-signup .dp-form button:hover{background:#e6e6e6}
+  .nspyr-signup .credit-repair-form{width:100%;margin:0;padding:0;border:0;background:transparent;color:var(--text);font-family:inherit}
+  .nspyr-signup .credit-repair-form .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px}
+  .nspyr-signup .credit-repair-form .form-group{display:flex;flex-direction:column;margin:0}
+  .nspyr-signup .credit-repair-form .form-group-full{grid-column:1/-1}
+  .nspyr-signup .credit-repair-form .form-group:has(input[required]) label::after{content:" *";color:var(--warn)}
+  .nspyr-signup .credit-repair-form label{display:block;min-height:32px;margin:0 0 6px;color:#fff;font-size:12px;line-height:16px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+  .nspyr-signup .credit-repair-form input:not([type=hidden]){height:46px;width:100%;box-sizing:border-box;display:block;padding:10px 14px;background:transparent;border:1px solid #4a4a4a;border-radius:8px;color:#fff;font-size:15px;font-weight:400;font-family:inherit;color-scheme:dark}
+  .nspyr-signup .credit-repair-form input::placeholder{color:#6b6b6b}
+  .nspyr-signup .credit-repair-form input:focus{outline:none;border-color:#fff}
+  .nspyr-signup .credit-repair-form small{margin-top:5px;color:var(--muted);font-size:11px}
+  .nspyr-signup .credit-repair-form .submit-button{width:100%;display:block;margin-top:22px;padding:14px;background:var(--accent);color:#000;border:0;border-radius:8px;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;line-height:1.2;font-family:inherit}
+  .nspyr-signup .credit-repair-form .submit-button:hover{background:#e6e6e6}
+  .nspyr-signup .credit-repair-form .submit-button:disabled{opacity:.6;cursor:not-allowed}
+  .nspyr-signup .credit-repair-form .form-message{margin-top:14px;text-align:center;font-size:14px;color:var(--warn)}
+  .nspyr-signup .credit-repair-form .form-message:empty{display:none}
   .nspyr-signup .fine{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
-  @media(max-width:820px){.nspyr-signup .wrap{grid-template-columns:1fr}.nspyr-signup .dp-form .grid{grid-template-columns:1fr}}
+  @media(max-width:820px){.nspyr-signup .wrap{grid-template-columns:1fr}.nspyr-signup .credit-repair-form .form-grid{grid-template-columns:1fr}}
