@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank You — SUNTRIA × Elevate Advisory Consulting</title>
+<style>
+  :root{--bg:#0b0b0b;--panel:#141414;--line:#2a2a2a;--text:#f5f5f5;--muted:#a3a3a3;--accent:#fff;--warn:#f5c542}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(ellipse at top,#1f1f1f,var(--bg) 60%);color:var(--text);font-family:Helvetica,Arial,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px}
+  .wrap{max-width:620px;width:100%;text-align:center}
+  .logo{width:min(240px,65vw);height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
+  .check{width:64px;height:64px;margin:26px auto 0;border-radius:50%;border:2px solid #d4af37;display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(212,175,55,.35)}
+  .check svg{width:30px;height:30px}
+  h1{font-size:clamp(28px,5vw,44px);font-weight:900;font-style:italic;letter-spacing:-.5px;margin:18px 0 12px;background:linear-gradient(110deg,#8a6a1c 0%,#d4af37 25%,#fff3b0 48%,#d4af37 60%,#8a6a1c 80%,#d4af37 100%);background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:goldShine 3.5s linear infinite;filter:drop-shadow(0 0 10px rgba(212,175,55,.35))}
+  @keyframes goldShine{to{background-position:250% center}}
+  .lead{color:var(--muted);line-height:1.6;margin:0 auto;max-width:480px;font-size:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;margin:28px 0 0;text-align:left}
+  .card h2{margin:0 0 6px;font-size:18px;text-align:center}
+  .card .sub{color:var(--muted);margin:0 0 18px;font-size:14px;text-align:center;line-height:1.5}
+  .steps{list-style:none;margin:0 0 22px;padding:0;font-size:14px;color:var(--muted)}
+  .steps li{padding:10px 0;border-top:1px solid var(--line)}
+  .steps b{color:var(--text)}
+  .btn{display:block;width:100%;padding:14px;background:var(--accent);color:#000;border-radius:8px;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-align:center;text-decoration:none;line-height:1.2}
+  .btn:hover{background:#e6e6e6}
+  .count{margin:12px 0 0;text-align:center;font-size:13px;color:var(--muted)}
+  .tag{display:inline-block;margin-top:24px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="logo" src="assets/nspyr-elevate-logo.svg" alt="SUNTRIA by Elevate Advisory Consulting">
+  <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+  <h1>You're All Set!</h1>
+  <p class="lead">Thank you for signing up. Your information is in, and the Elevate Advisory Consulting team is already on it. Whether you're working toward solar with SUNTRIA or simply building better credit, you just took the first step.</p>
+
+  <section class="card">
+    <h2>One last step</h2>
+    <p class="sub">Activate your credit monitoring so we can pull your reports and start building your plan.</p>
+    <ul class="steps">
+      <li><b>1. Activate monitoring.</b> Click the button below to enroll. It only takes a couple of minutes.</li>
+      <li><b>2. We review your credit.</b> Our team goes through your reports and finds what's holding your score back.</li>
+      <li><b>3. We reach out.</b> Expect a call or text from Elevate within 1 business day.</li>
+    </ul>
+    <a class="btn" href="https://app.myfreescorenow.com/enroll/B02C0134">Activate My Credit Monitoring</a>
+    <p class="count" id="ty-count">Taking you there automatically in <span id="ty-secs">10</span> seconds…</p>
+  </section>
+
+  <span class="tag">SUNTRIA × Elevate Advisory Consulting</span>
+</div>
+<script>
+(function(){
+  var URL = "https://app.myfreescorenow.com/enroll/B02C0134";
+  var secs = 10, el = document.getElementById("ty-secs");
+  var t = setInterval(function(){
+    secs--;
+    if (el) el.textContent = secs;
+    if (secs <= 0) { clearInterval(t); window.location.replace(URL); }
+  }, 1000);
+})();
+</script>
+</body>
+</html>

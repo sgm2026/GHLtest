@@ -74,7 +74,10 @@
 
 
 <script>
-var REDIRECT_URL = "https://app.myfreescorenow.com/enroll/B02C0134";
+// Paste your builder thank-you page URL between the quotes, e.g. "https://yoursite.com/thank-you".
+// If left blank, clients go straight to MyFreeScoreNow enrollment.
+var THANK_YOU_URL = "";
+var REDIRECT_URL = THANK_YOU_URL || "https://app.myfreescorenow.com/enroll/B02C0134";
 
 function submitForm(form) {
   var formData = new FormData();

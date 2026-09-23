@@ -1,0 +1,52 @@
+<!-- SUNTRIA x Elevate Advisory Consulting - Thank You Page
+     Paste this whole block into a Custom HTML / Code element on your thank-you page.
+     Put the contents of thankyou-styles.css in the page's Custom CSS area. -->
+
+<div class="nspyr-thanks">
+<div class="wrap">
+  <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="NSPYR by Elevate Advisory Consulting">
+  <circle cx="200" cy="200" r="196" fill="#fff"/>
+  <circle cx="200" cy="200" r="184" fill="#000"/>
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#fff" stroke-width="3"/>
+  <!-- monogram -->
+  <g transform="translate(270 143) scale(0.52)" stroke-linejoin="miter" stroke-linecap="butt">
+    <path d="M66 0 C58 28 72 48 100 46 C76 42 64 24 66 0 Z" fill="#f7c31c"/>
+    <path d="M12 68 Q14 44 34 30 Q54 44 56 68" fill="none" stroke="#e2231a" stroke-width="8"/>
+    <path d="M6 100 V76 H62 V100" fill="none" stroke="#fff" stroke-width="8"/>
+  </g>
+  <!-- wordmark -->
+  <text x="75" y="196" fill="#fff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="300" font-size="50" letter-spacing="2" textLength="198" lengthAdjust="spacingAndGlyphs">SUNTRI</text>
+  <!-- tagline -->
+  <text x="200" y="234" text-anchor="middle" fill="#fff" font-family="Helvetica, Arial, sans-serif" font-size="11.5" letter-spacing="2">BY <tspan font-weight="700">ELEVATE ADVISORY CONSULTING</tspan></text>
+  <line x1="182" y1="260" x2="218" y2="260" stroke="#fff" stroke-width="3"/>
+</svg>
+  <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+  <h1>You're All Set!</h1>
+  <p class="lead">Thank you for signing up. Your information is in, and the Elevate Advisory Consulting team is already on it. Whether you're working toward solar with SUNTRIA or simply building better credit, you just took the first step.</p>
+
+  <section class="card">
+    <h2>One last step</h2>
+    <p class="sub">Activate your credit monitoring so we can pull your reports and start building your plan.</p>
+    <ul class="steps">
+      <li><b>1. Activate monitoring.</b> Click the button below to enroll. It only takes a couple of minutes.</li>
+      <li><b>2. We review your credit.</b> Our team goes through your reports and finds what's holding your score back.</li>
+      <li><b>3. We reach out.</b> Expect a call or text from Elevate within 1 business day.</li>
+    </ul>
+    <a class="btn" href="https://app.myfreescorenow.com/enroll/B02C0134">Activate My Credit Monitoring</a>
+    <p class="count" id="ty-count">Taking you there automatically in <span id="ty-secs">10</span> seconds…</p>
+  </section>
+
+  <span class="tag">SUNTRIA × Elevate Advisory Consulting</span>
+</div>
+<script>
+(function(){
+  var URL = "https://app.myfreescorenow.com/enroll/B02C0134";
+  var secs = 10, el = document.getElementById("ty-secs");
+  var t = setInterval(function(){
+    secs--;
+    if (el) el.textContent = secs;
+    if (secs <= 0) { clearInterval(t); window.location.replace(URL); }
+  }, 1000);
+})();
+</script>
+</div>
