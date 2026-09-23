@@ -24,8 +24,8 @@ Process signup form inline (transparent background, white labels; redirects to M
 ## Thank-you page
 
 `thank-you.html` is where clients land after submitting the signup form. It
-confirms the signup and sends them on to MyFreeScoreNow enrollment, by button
-or automatically after 10 seconds. Builder copies live at
+confirms the signup and links them to MyFreeScoreNow enrollment
+with a button. Builder copies live at
 `builder/thankyou-styles.css` and `builder/thankyou-block.html` (scoped under
 `.nspyr-thanks`). In the builder signup block, set `THANK_YOU_URL` to the
 thank-you page's address; if blank, the form goes straight to MyFreeScoreNow.
