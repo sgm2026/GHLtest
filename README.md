@@ -27,5 +27,5 @@ Process signup form inline (transparent background, white labels; redirects to M
 confirms the signup and links them to MyFreeScoreNow enrollment
 with a button. Builder copies live at
 `builder/thankyou-styles.css` and `builder/thankyou-block.html` (scoped under
-`.nspyr-thanks`). In the builder signup block, set `THANK_YOU_URL` to the
-thank-you page's address; if blank, the form goes straight to MyFreeScoreNow.
+`.nspyr-thanks`). The signup form posts into a hidden frame and then sends the client to the
+thank-you page, so it works even where the builder blocks `<script>` tags.

@@ -35,11 +35,11 @@
     <h2>Create your account</h2>
     <p class="sub">Fill in your details below. Fields marked with a star are required. / Complete sus datos a continuación.</p>
 
-<form action="https://pulse.disputeprocess.com/CustumFieldController" id="suntria-signup-form" enctype="multipart/form-data" method="POST" class="credit-repair-form">
+<form action="https://pulse.disputeprocess.com/CustumFieldController?method=addWebFormData" id="suntria-signup-form" target="suntria-dp-sink" onsubmit="var s=this.elements['socialSecurityNumber1'];var d=s?s.value.replace(/\D/g,''):'';if(s&&s.value.length&&(d.length<4||d.length>9)){alert('Please enter 4 to 9 digits for SSN/ITIN.');return false;}this.setAttribute('data-sent','1');var b=this.querySelector('.submit-button');if(b){b.disabled=true;b.textContent='Submitting...';}return true;" enctype="multipart/form-data" method="POST" class="credit-repair-form">
   <!-- DISPUTE PROCESS SETTINGS -->
   <input type="hidden" name="method" value="addWebFormData">
   <input type="hidden" name="tab_info_id" value="bUt4d21QYTZCWGRsVVpONE9CUlNpZz09">
-  <input type="hidden" name="redirect_url" value="https://app.myfreescorenow.com/enroll/B02C0134">
+  <input type="hidden" name="redirect_url" value="https://suntria.elevate-advisoryconsulting.com/confirmed">
   <input type="hidden" name="company_id" value="N1FiRlBIdmhXMUNZRDJyUEgyRzE4UT09">
   <input type="hidden" name="cust_type" value="2">
   <input type="hidden" name="add_affiliate_flag" value="0">
@@ -67,73 +67,11 @@
   <button type="submit" class="submit-button">YES! Sign Me Up!</button>
   <div id="form-message" class="form-message"></div>
 </form>
+<iframe name="suntria-dp-sink" title="Form submission" style="display:none" onload="var f=document.getElementById('suntria-signup-form');if(f&&f.getAttribute('data-sent')){window.location.href='https://suntria.elevate-advisoryconsulting.com/confirmed';}"></iframe>
 
     <p class="fine">By signing up you agree to be contacted by Elevate Advisory Consulting.</p>
   </section>
 </div>
 
 
-<script>
-(function () {
-// Paste your builder thank-you page URL between the quotes, e.g. "https://yoursite.com/thank-you".
-// If left blank, clients go straight to MyFreeScoreNow enrollment.
-var THANK_YOU_URL = "https://suntria.elevate-advisoryconsulting.com/confirmed";
-var REDIRECT_URL = THANK_YOU_URL || "https://app.myfreescorenow.com/enroll/B02C0134";
-
-var BUTTON_TEXT = "YES! Sign Me Up!";
-
-function ssnValid(ssn) {
-  var clean = ssn.replace(/\D/g, "");
-  if (!/^[0-9]+$/.test(clean)) { alert("Invalid SSN/ITIN. Please enter digits only."); return false; }
-  if (clean.length > 9) { alert("SSN/ITIN cannot contain more than 9 digits."); return false; }
-  if (clean.length < 4) { alert("Please enter at least the last 4 digits."); return false; }
-  return true;
-}
-
-function handleSubmit(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  var form = e.currentTarget;
-  var formData = new FormData();
-  for (var i = 0; i < form.elements.length; i++) {
-    var el = form.elements[i];
-    if (!el.name) continue;
-    if (el.name.indexOf("socialSecurityNumber") !== -1 && el.value.length > 0 && !ssnValid(el.value)) return;
-    if (el.type === "checkbox") formData.append(el.name, el.checked);
-    else if (el.type === "radio") { if (el.checked) formData.append(el.name, el.value); }
-    else formData.append(el.name, el.value);
-  }
-
-  var button = form.querySelector(".submit-button");
-  var message = form.querySelector(".form-message");
-  button.disabled = true;
-  button.textContent = "Submitting...";
-  message.textContent = "";
-
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState !== 4) return;
-    if (xhr.responseText && xhr.responseText.indexOf("Account is in-activated") !== -1) {
-      button.disabled = false;
-      button.textContent = BUTTON_TEXT;
-      message.textContent = "This registration service is currently inactive. Please contact us for assistance.";
-      return;
-    }
-    window.location.replace(REDIRECT_URL);
-  };
-  xhr.open("POST", "https://pulse.disputeprocess.com/CustumFieldController?method=addWebFormData", true);
-  xhr.send(formData);
-}
-
-function init() {
-  var form = document.getElementById("suntria-signup-form");
-  if (!form || form.getAttribute("data-bound")) return;
-  form.setAttribute("data-bound", "1");
-  form.addEventListener("submit", handleSubmit, true);
-}
-
-init();
-if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
-})();
-</script>
 </div>
